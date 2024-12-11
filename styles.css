@@ -56,6 +56,7 @@ body {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .vinilo-card:hover {
@@ -81,3 +82,58 @@ body {
     font-size: 14px;
 }
 
+form {
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid white;
+    width: 300px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+}
+
+form input[type="submit"] {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+form input[type="submit"]:hover {
+    background-color: white;
+    color: black;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 40px;
+    color: #ccc;
+}

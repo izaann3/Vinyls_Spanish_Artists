@@ -31,6 +31,7 @@ if (!isset($_SESSION['vinilos'])) {
                         <img src='" . htmlspecialchars($vinilo['imagen']) . "' alt='Imagen del vinilo'>
                         <h3>" . htmlspecialchars($vinilo['nombre']) . "</h3>
                         <p><strong>Artista:</strong> " . htmlspecialchars($vinilo['artista']) . "</p>
+                        <p><strong>Género:</strong> " . htmlspecialchars($vinilo['genero']) . "</p>
                         <p><strong>Precio:</strong> " . htmlspecialchars($vinilo['precio']) . " €</p>
                         <p><strong>Fecha:</strong> " . htmlspecialchars($vinilo['fecha']) . "</p>
                         <a href='edit.php?id=$index'><button>Editar</button></a>
