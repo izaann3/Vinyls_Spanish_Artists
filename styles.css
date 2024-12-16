@@ -46,6 +46,7 @@ body {
     justify-content: space-around;
     gap: 20px;
     padding: 20px;
+    flex: 1;
 }
 
 .vinilo-card {
@@ -136,4 +137,16 @@ p {
     text-align: center;
     margin-top: 40px;
     color: #ccc;
+}
+
+.footer {
+    text-align: center;
+    width: 100%;
+    background-color: black;
+    color: white;        
+    padding: 10px 0;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }

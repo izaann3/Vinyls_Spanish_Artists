@@ -73,6 +73,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
     </div>
 
+    <div class="footer">
+        <p>Copyright (c) 2024 Izeta3. All rights reserved.</p>
+    </div>
+
 </body>
 </html>
 

@@ -12,3 +12,4 @@ This is a web project developed in PHP to manage vinyl records of Spanish artist
 - Add vinyls with image, name, artist, price, and release date.
 - Edit and delete saved vinyls.
 - View vinyls in a simple interface with a column-based design.
+

@@ -23,7 +23,10 @@ if (!isset($_SESSION['vinilos'])) {
         <?php
         // Si no hay vinilos, mostramos un mensaje
         if (empty($_SESSION['vinilos'])) {
-            echo "<p>No hay vinilos guardados. ¡Añade algunos!</p>";
+            echo "<div class='no-vinilos-container'>
+                    <p>No hay vinilos guardados. ¡Añade algunos!</p>
+                    <img src='img/vinilo.gif' alt='Imagen sin vinilos' class='no-vinilos-image'>
+                  </div>";
         } else {
             // Si hay vinilos, los mostramos en tarjetas
             foreach ($_SESSION['vinilos'] as $index => $vinilo) {
@@ -40,6 +43,10 @@ if (!isset($_SESSION['vinilos'])) {
             }
         }
         ?>
+    </div>
+    
+    <div class="footer">
+        <p>Copyright (c) 2024 Izeta3. All rights reserved.</p>
     </div>
 
 </body>
