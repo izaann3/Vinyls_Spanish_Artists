@@ -3,6 +3,53 @@ session_start();
 if (!isset($_SESSION['vinilos'])) {
     $_SESSION['vinilos'] = [];
 }
+
+if (isset($_GET['filter'])) {
+    $filter = $_GET['filter'];
+
+    switch ($filter) {
+        case 'artista_asc':
+            usort($_SESSION['vinilos'], function ($a, $b) {
+                return strcmp($a['artista'], $b['artista']);
+            });
+            break;
+        case 'artista_desc':
+            usort($_SESSION['vinilos'], function ($a, $b) {
+                return strcmp($b['artista'], $a['artista']);
+            });
+            break;
+        case 'vinilo_asc':
+            usort($_SESSION['vinilos'], function ($a, $b) {
+                return strcmp($a['nombre'], $b['nombre']);
+            });
+            break;
+        case 'vinilo_desc':
+            usort($_SESSION['vinilos'], function ($a, $b) {
+                return strcmp($b['nombre'], $a['nombre']);
+            });
+            break;
+        case 'precio_asc':
+            usort($_SESSION['vinilos'], function ($a, $b) {
+                return $a['precio'] - $b['precio'];
+            });
+            break;
+        case 'precio_desc':
+            usort($_SESSION['vinilos'], function ($a, $b) {
+                return $b['precio'] - $a['precio'];
+            });
+            break;
+        case 'fecha_asc':
+            usort($_SESSION['vinilos'], function ($a, $b) {
+                return strtotime($a['fecha']) - strtotime($b['fecha']);
+            });
+            break;
+        case 'fecha_desc':
+            usort($_SESSION['vinilos'], function ($a, $b) {
+                return strtotime($b['fecha']) - strtotime($a['fecha']);
+            });
+            break;
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -18,14 +65,14 @@ if (!isset($_SESSION['vinilos'])) {
     <div class="navbar">
         <a href="add.php"><button>Añadir Vinilo</button></a>
     </div>
-
+   
     <div class="content">
         <?php
         // Si no hay vinilos, mostramos un mensaje
         if (empty($_SESSION['vinilos'])) {
             echo "<div class='no-vinilos-container'>
                     <p>No hay vinilos guardados. ¡Añade algunos!</p>
-                    <img src='img/vinilo.gif' alt='Imagen sin vinilos' class='no-vinilos-image'>
+                    	<img src='img/vinilo.gif' alt='Imagen sin vinilos' class='no-vinilos-image'>
                   </div>";
         } else {
             // Si hay vinilos, los mostramos en tarjetas
@@ -43,6 +90,22 @@ if (!isset($_SESSION['vinilos'])) {
             }
         }
         ?>
+    </div>
+    
+    <div class="filter-container">
+    <form method="GET" action="index.php">
+        <select name="filter" onchange="this.form.submit()">
+            <option value="">Filtrar por...</option>
+            <option value="artista_asc">Alfabéticamente Artista, A-Z</option>
+            <option value="artista_desc">Alfabéticamente Artista, Z-A</option>
+            <option value="vinilo_asc">Alfabéticamente Nombre Vinilo, A-Z</option>
+            <option value="vinilo_desc">Alfabéticamente Nombre Vinilo, Z-A</option>
+            <option value="precio_asc">Precio, menor a mayor</option>
+            <option value="precio_desc">Precio, mayor a menor</option>
+            <option value="fecha_asc">Fechas, más antiguo a más nuevo</option>
+            <option value="fecha_desc">Fechas, más nuevo a más antiguo</option>
+        </select>
+    </form>
     </div>
     
     <div class="footer">

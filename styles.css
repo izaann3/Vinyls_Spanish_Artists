@@ -29,6 +29,7 @@ body {
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
+    width: 200px;
     transition: background-color 0.3s;
 }
 
@@ -150,3 +151,36 @@ p {
     bottom: 0;
     left: 0;
 }
+
+/* Nueva clase para el contenedor del filtro */
+.filter-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; 
+    padding-bottom: 20px;
+}
+
+.filter-container form {
+    display: inline-block;
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+    border: none; /* Elimina el borde del formulario */
+}
+
+.filter-container form select {
+    background-color: black;
+    color: white;
+    border: 2px solid white; /* Solo borde para el select */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.filter-container select:hover {
+    background-color: white;
+    color: black;
+}
+
