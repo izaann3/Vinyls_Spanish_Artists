@@ -63,7 +63,6 @@ if (isset($_GET['quick_add']) && $_GET['quick_add'] == 'true') {
 
     $_SESSION['vinilos'][] = $vinilo_rapido;
 
-    // Redirigir a la página de inicio
     header('Location: index.php');
     exit;
 }
