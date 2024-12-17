@@ -50,6 +50,24 @@ if (isset($_GET['filter'])) {
             break;
     }
 }
+
+if (isset($_GET['quick_add']) && $_GET['quick_add'] == 'true') {
+    $vinilo_rapido = [
+        'nombre' => 'Casanova Deluxe',
+        'artista' => 'Recycled J',
+        'genero' => 'Hip Hop',
+        'precio' => 20,
+        'fecha' => '2024-12-01',
+        'imagen' => 'https://cdn.grupoelcorteingles.es/SGFM/dctm/MEDIA03/202309/04/00105112232672____2__1200x1200.jpg'
+    ];
+
+    $_SESSION['vinilos'][] = $vinilo_rapido;
+
+    // Redirigir a la página de inicio
+    header('Location: index.php');
+    exit;
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -64,8 +82,9 @@ if (isset($_GET['filter'])) {
 
     <div class="navbar">
         <a href="add.php"><button>Añadir Vinilo</button></a>
+        <a href="index.php?quick_add=true"><button class="quick-add-button">Añadir Vinilo Rápido</button></a>
     </div>
-   
+    
     <div class="content">
         <?php
         // Si no hay vinilos, mostramos un mensaje
