@@ -121,7 +121,7 @@ if (isset($_GET['quick_add']) && $_GET['quick_add'] == 'true') {
         ?>
     </div>
     
-    <!-- Contenedor para el filtro de vinilos -->
+    <!-- Div para el filtro de vinilos -->
     <div class="filter-container">
         <form method="GET" action="index.php">
             <select name="filter" onchange="this.form.submit()">
@@ -139,7 +139,7 @@ if (isset($_GET['quick_add']) && $_GET['quick_add'] == 'true') {
         </form>
     </div>
     
-    <!-- Pie de página -->
+    <!-- Pie de página con mi propio copy -->
     <div class="footer">
         <p>Copyright (c) 2024 Izeta3. All rights reserved.</p>
     </div>
