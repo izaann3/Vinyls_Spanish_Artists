@@ -1,5 +1,5 @@
 <?php
-// Inicia la sesión para poder almacenar datos durante la navegación
+// Inicia la sesión
 session_start();
 
 // Verifica si se ha enviado el formulario usando el método POST
@@ -23,10 +23,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">  <!-- Define la codificación de caracteres -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Hace la página adaptable a diferentes tamaños de pantalla -->
-    <title>Añadir Vinilo</title>  <!-- Título de la página -->
-    <link rel="stylesheet" href="styles.css">  <!-- Enlace a la hoja de estilos CSS -->
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Añadir Vinilo</title> 
+    <link rel="stylesheet" href="styles.css">  
 </head>
 <body>
 
@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <label for="genero">Género:</label>
             <select name="genero" required>
                 <?php
-                // Array con los géneros musicales disponibles
+                // Array con los géneros
                 $generos = [
                     "Flamenco", "Salsa", "Rumba", "Bossa nova", "Pop español", 
                     "Rock español", "Indie español", "Reggaetón", "Trap", 
@@ -84,7 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
     </div>
 
-    <!-- Pie de página -->
+    <!-- Pie de página con mi propio copy  -->
     <div class="footer">
         <p>Copyright (c) 2024 Izeta3. All rights reserved.</p>
     </div>
