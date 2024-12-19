@@ -29,10 +29,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">  <!-- Define la codificación de caracteres -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Hace la página adaptable a diferentes tamaños de pantalla -->
-    <title>Editar Vinilo</title>  <!-- Título de la página -->
-    <link rel="stylesheet" href="styles.css">  <!-- Enlace a la hoja de estilos CSS -->
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Editar Vinilo</title> 
+    <link rel="stylesheet" href="styles.css">  
 </head>
 <body>
 
