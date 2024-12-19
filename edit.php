@@ -93,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
     </div>
 
-    <!-- Pie de página -->
+    <!-- Pie de página con mi propio copy -->
     <div class="footer">
         <p>Copyright (c) 2024 Izeta3. All rights reserved.</p>
     </div>
